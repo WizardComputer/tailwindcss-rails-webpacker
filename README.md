@@ -12,6 +12,11 @@ This is extraction originally created inside the [tailwindcss-rails](https://git
 1. Run `./bin/bundle add tailwindcss-rails-webpacker`
 2. Run `./bin/rails tailwindcss:install`
 
+## Purging in production
+
+The Tailwind CSS framework starts out as a massive file, which gives you all the combinations of utility classes for development, but you wouldn't want to ship all those unused classes in production.
+
+This gem will automatically purge those unused classes in production.
 
 ## License
 
