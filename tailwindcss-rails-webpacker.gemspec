@@ -5,7 +5,7 @@ Gem::Specification.new do |spec|
   spec.version     = Tailwindcss::VERSION
   spec.authors     = [ "Dino Maric", "David Heinemeier Hansson" ]
   spec.email       = ["dinom@hey.com"]
-  spec.homepage    = "https://github.com/rails/tailwindcss-rails"
+  spec.homepage    = "https://github.com/WizardComputer/tailwindcss-rails-webpacker"
   spec.summary     = "Integrate Tailwind CSS with the Rails webpacker."
   spec.license     = "MIT"
 
