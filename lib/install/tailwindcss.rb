@@ -2,7 +2,7 @@ WEBPACK_STYLESHEETS_PATH = "#{Webpacker.config.source_path}/stylesheets"
 APPLICATION_LAYOUT_PATH  = Rails.root.join("app/views/layouts/application.html.erb")
 
 say "Installing Tailwind CSS"
-run "yarn add tailwindcss@npm:@tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9"
+run "yarn add tailwindcss@latest postcss@latest autoprefixer@latest webpack-dev-server@3.11.2"
 insert_into_file "#{Webpacker.config.source_entry_path}/application.js", "\nimport \"stylesheets/application\"\n"
 
 say "Configuring Tailwind CSS"
