@@ -13,8 +13,10 @@ insert_into_file "postcss.config.js", "require('tailwindcss')(\"./app/javascript
 
 
 if APPLICATION_LAYOUT_PATH.exist?
-  say "Add Tailwindcss include tags in application layout"
+  say "Add Tailwindcss include tags and container element in application layout"
   insert_into_file Rails.root.join("app/views/layouts/application.html.erb").to_s, %(\n    <%= stylesheet_pack_tag "application", "data-turbo-track": "reload" %>), before: /\s*<\/head>/
+  insert_into_file APPLICATION_LAYOUT_PATH.to_s, %(    <main class="container mx-auto mt-28 px-5 flex">\n  ), before: /^\s*<%= yield/
+  insert_into_file APPLICATION_LAYOUT_PATH.to_s, %(\n    </main>),  after: /^\s*<%= yield %>/
 else
   say "Default application.html.erb is missing!", :red
   say %(        Add <%= stylesheet_pack_tag "application", "data-turbo-track": "reload" %> within the <head> tag in your custom layout.)
