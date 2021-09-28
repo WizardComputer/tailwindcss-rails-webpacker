@@ -6,11 +6,15 @@ This gem gives access to the standard Tailwind CSS framework configured for Rail
 
 This is extraction originally created inside the [tailwindcss-rails](https://github.com/rails/tailwindcss-rails) gem.
 
+Gem overrides default Rails scaffold generators in favour of Tailwind
+designed templates by Adam Wathan and the Tailwind team.
+
 
 ## Installation
 
 1. Run `./bin/bundle add tailwindcss-rails-webpacker`
 2. Run `./bin/rails tailwindcss:install`
+
 
 ## Purging in production
 
@@ -20,5 +24,5 @@ This gem will automatically purge those unused classes in production.
 
 ## License
 
-Tailwind for Rails is released under the [MIT License](https://opensource.org/licenses/MIT).
+Tailwind for Rails Webpacker is released under the [MIT License](https://opensource.org/licenses/MIT).
 Tailwind CSS is released under the [MIT License](https://opensource.org/licenses/MIT).
