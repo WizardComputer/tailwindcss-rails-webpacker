@@ -1,0 +1,8 @@
+<div class="mx-auto md:w-2/3 w-full">
+  <h1 class="text-lg font-bold text-4xl">
+    <%= class_name %>#<%= @action %>
+  </h1>
+  <p class="my-5">
+    Find me in <%= @path %>
+  </p>
+</div>
