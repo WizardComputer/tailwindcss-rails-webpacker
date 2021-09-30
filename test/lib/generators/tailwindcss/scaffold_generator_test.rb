@@ -1,4 +1,4 @@
-require "test_helper"
+require "./test/test_helper"
 require "generators/tailwindcss/scaffold/scaffold_generator"
 
 class Tailwindcss::Generators::ScaffoldGeneratorTest < Rails::Generators::TestCase
