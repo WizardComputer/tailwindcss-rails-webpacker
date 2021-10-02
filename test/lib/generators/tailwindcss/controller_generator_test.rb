@@ -9,14 +9,22 @@ class Tailwindcss::Generators::ControllerGeneratorTest < Rails::Generators::Test
 
   arguments %w(Messages index show)
 
-   Minitest.after_run do
-     FileUtils.rm_rf GENERATION_PATH
-   end
+  Minitest.after_run do
+    FileUtils.rm_rf GENERATION_PATH
+  end
 
   test "generates correct view templates" do
     run_generator
     assert_file "app/views/messages/index.html.erb"
     assert_file "app/views/messages/show.html.erb"
   end
-end
 
+  test "should revoke the template engine" do
+    run_generator
+    run_generator ["messages"], behavior: :revoke
+
+    assert_no_file "app/views/messages"
+    assert_no_file "app/views/messages/index.html.erb"
+    assert_no_file "app/views/messages/show.html.erb"
+  end
+end
